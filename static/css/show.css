@@ -1,0 +1,12 @@
+body {
+    background-image: url("../images/services.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    margin-top: 300px;
+}
+table{
+    margin-top: 400px;
+}
+
