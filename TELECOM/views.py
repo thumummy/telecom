@@ -1,16 +1,14 @@
 from urllib import request
 
 from django.http import HttpResponse
-from django.shortcuts import render,redirect
-from TELECOM.models import customer,ourservices
-from TELECOM.forms import ourservicesform
+from django.shortcuts import render, redirect
+from TELECOM.models import customer, ourservices, imagemodel
+from TELECOM.forms import ourservicesform, imageuploadform
 import requests
 import json
 import base64
 from requests.auth import HTTPBasicAuth
-from TELECOM.credentials import MpesaC2bCredential,MpesaAccessToken,LipanaMpesaPpassword
-
-
+from TELECOM.credentials import MpesaC2bCredential, MpesaAccessToken, LipanaMpesaPpassword
 
 # Create your views here.
 
@@ -48,7 +46,6 @@ def dropdowd():
 
 def services(request):
     return render(request,'services.html')
-
 def contact(request):
     return render(request,'contact.html')
 
@@ -63,29 +60,28 @@ def add(request):
            return redirect("/add")
     else:
            form = ourservicesform()
-           return render(request, 'addproduct.html', {'form':form})
+           return render(request, 'addproduct.html', {'form': form})
 
 def show(request):
-    products = ourservices.objects.all()
-    return render(request,'show.html',{'ourservices':products})
+    product = ourservices.objects.all()
+    return render(request,'show.html',{'ourservices': product})
 
 def delete(request ,id):
-    products =  ourservices.objects.all()
-    products.delete()
+    product = ourservices.objects.get(id=id)
+    product.delete()
     return redirect('/show')
 
 def edit(request, id):
-    products = ourservices.objects.get(id=id)
-    return render(request,'edit.html',{'ourservices':products})
-
+    product = ourservices.objects.get(id=id)
+    return render(request,'edit.html',{'ourservices': product})
 
 def update(request, id):
-    products = ourservices.objects.get(id=id)
-    form = ourservicesform(request.POST,instance=products)
+    product = ourservices.objects.get(id=id)
+    form = ourservicesform(request.POST, instance=product)
     if form.is_valid():
         form.save()
         return redirect('/show')
-    return render(request,'edit.html',{'ourservices':products})
+    return render(request, 'edit.html', {'ourservices': product})
 
 
 def token(request):
@@ -127,3 +123,21 @@ def stk(request):
         return HttpResponse(response)
 
 
+def uploadproducts(request):
+    if request.method == 'POST':
+        form = imageuploadform(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('/uploadproducts')
+    else:
+        form = imageuploadform()
+    return render(request, 'upload products.html', {'form': form})
+
+def showproducts(request):
+    images = imagemodel.objects.all()
+    return render(request, 'show products.html', {'imagemodel': images})
+
+def imagedelete(request, id):
+    image = imagemodel.objects.get(id=id)
+    image.delete()
+    return redirect('/showproducts')

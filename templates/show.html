@@ -60,10 +60,10 @@
           <li><a class="nav-link scrollto" href="{% url 'services' %}">Services</a></li>
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="{% url 'show' %}">show product</a></li>
+              <li><a href="{% url 'show' %}">see services</a></li>
               <li><a href="{% url 'add' %}">add product</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="{% url 'uploadproducts' %}">add product</a></li>
+              <li><a href="{% url 'uploadproducts' %}">see product</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
@@ -73,7 +73,7 @@
 
     </div>
   </header><!-- End Header -->
-
+  <br><br><br><br><br>
 <table class="table table-info" style="margin: auto">
 <h1 class="text-center text-bg-success">available services</h1>
 <thead clas="table.dark">
@@ -86,15 +86,15 @@
 </thead>
 
 <tbody>
-{% for ourservices in ourservices %}
+{% for product in ourservices %}
 <tr>
-    <td>{{ ourservices.name }}</td>
-    <td>{{ ourservices.price }}</td>
-    <td>{{ ourservices.providercontact }}</td>
+    <td>{{ product.name }}</td>
+    <td>{{ product.price }}</td>
+    <td>{{ product.providercontact }}</td>
 
        <td>
-             <a href="/edit/{{ ourservices.id }}" class="btn btn-outline-info">edit</a>
-             <a href="/delete/{{ ourservices.id }}" class="btn btn-outline-primary">delete</a>
+             <a href="/edit/{{ product.id }}" class="btn btn-outline-info">edit</a>
+             <a href="/delete/{{ product.id }}" class="btn btn-outline-primary">delete</a>
              <a href="{% url 'pay' %}" class="btn btn-outline-success">pay</a>
        </td>
     </tr>
@@ -105,7 +105,7 @@
 
 <center><a href="{% url 'add'%}" class="btn btn-primary">add new service</a></center>
 
-
+  <br><br><br><br><br><br><br><br><br><br><br><br>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">

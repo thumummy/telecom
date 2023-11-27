@@ -14,7 +14,7 @@
   <!-- Favicons -->
   <link href="{% static 'assets/img/icon.png' %}" rel="icon">
   <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-
+    <link rel="stylesheet" href="{% static 'css/edit.css' %}">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -58,10 +58,10 @@
           <li><a class="nav-link scrollto" href="{% url 'services' %}">Services</a></li>
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="{% url 'show' %}">show product</a></li>
-              <li><a href="{% url 'add' %}">add product</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="{% url 'show' %}">see services</a></li>
+              <li><a href="{% url 'add' %}">add services</a></li>
+              <li><a href="{% url 'uploadproducts' %}"></a>add products</li>
+              <li><a href="{% url 'showproducts' %}"></a>see products</li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
@@ -104,11 +104,11 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
-              <h3>Multi</h3>
-              <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
+              <h3>telecom company f</h3>
+              <p class="pb-3"><em>purposed to connect people during social distances</em></p>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
+                telecom company f<br>
+                kwale kenya<br><br>
                 <strong>Phone:</strong> +1 5589 55488 55<br>
                 <strong>Email:</strong> info@example.com<br>
               </p>

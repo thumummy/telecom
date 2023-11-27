@@ -107,7 +107,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fff;
+  background: peru;
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
@@ -144,6 +144,7 @@ h6 {
 */
 .navbar {
   padding: 0;
+
 }
 
 .navbar ul {
@@ -557,6 +558,7 @@ h6 {
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
+  background-image: url("../img/generallogo.png");
 }
 
 .section-bg {
@@ -601,6 +603,7 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;

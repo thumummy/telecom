@@ -5,17 +5,16 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>services</title>
+  <title>edit</title>
+    <i s></i>
     {% load static %}
   <meta content="" name="description">
   <meta content="" name="keywords">
-    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
-    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
 
   <!-- Favicons -->
   <link href="{% static 'assets/img/icon.png' %}" rel="icon">
   <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-
+    <link rel="stylesheet" href="{% static 'css/pay.css' %}">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -47,52 +46,50 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><img src="{% static 'images/saflogo2.png' %}" c alt=""><a href="index.html">telecom company f</a></h1>
+      <h1 class="logo"><a href="index.html">telecom company f</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto " href="{% url 'index' %}">Home</a></li>
-          <li><a class="nav-link scrollto " href="{% url 'about' %}">About</a></li>
-          <li><a class="nav-link scrollto " href="{% url 'services' %}">Services</a></li>
-          <li class="dropdown "><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto" href="{% url 'about' %}">About</a></li>
+            <li><a class="nav-link scrollto text-success" href="{% url 'add' %}">add</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'services' %}">Services</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{% url 'show' %}">see services</a></li>
               <li><a href="{% url 'add' %}">add services</a></li>
-              <li><a href="{% url 'uploadproducts' %}">add products</a></li>
-              <li><a href="{% url 'showproducts' %}">see products</a></li>
+              <li><a href="{% url 'uploadproducts' %}"></a>add products</li>
+              <li><a href="{% url 'showproducts' %}"></a>see products</li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto " href="{% url 'contact' %}">Contact</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
-  <br><br><br><br>
-<h1 class="text-center bg-success">goods and services available</h1>
-  <div class="row bg-secondary">
-      <div class="col">
-        <h1>ofered services</h1>
-        <img src="{% static 'assets/img/service.png' %}" alt="">
-        <p class="text-dark">Explore a world of possibilities with our comprehensive range of telecom services. From cutting-edge mobile plans to robust internet solutions, we provide the connectivity you need. Click the button below to discover our diverse array of services tailored to meet your communication needs</p>
-        <a href="{% url 'show' %}" class="btn-primary">see our services</a>
+  <br><br><br>
 
-      </div>
+<h1 class="bg-success text-center">make a payment here</h1>
+<form method="post" action="{% url 'stk' %}" style="display: auto">
+    {% csrf_token %}
+    <label for="phone">phone number :</label>
+    <input type="number" id="phone" name="phone" value="254" required="required">
+    <br><br>
+     <label for="amount">amount :</label>
+    <input type="number" id="amount" name="amount"  required="required">
+    <br><br>
+    <button type="submit">pay</button>
+</form>
 
-  <div class="col">
-      <h1>available goods</h1>
-      <img src="{% static 'assets/img/goods.png' %}" alt="">
-      <p class="text-dark">Discover a universe of top-notch goods at our company. Our curated selection includes the latest devices, accessories, and more, ensuring you stay ahead in the world of technology. Navigate to our product offerings by clicking the link below, where quality meets innovation. Elevate your tech experience with our premium goods.</p>
-      <a href="{% url 'showproducts' %}" class="btn-outline-success">see products</a>
-  </div>
-  </div>
 
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <!-- ======= Footer ======= -->
   <footer id="footer">
-    <div class="footer-top bg-dark">
+    <div class="footer-top">
       <div class="container">
         <div class="row">
 
@@ -102,9 +99,9 @@
               <p class="pb-3"><em>purposed to connect people during social distances</em></p>
               <p>
                 telecom company f <br>
-                  kenya<br><br>
+                kale kenya<br><br>
                 <strong>Phone:</strong> 0793031327<br>
-                <strong>Email:</strong> fchambaza@gmail.com<br>
+                <strong>Email:</strong> fchammbaza@gmail.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -139,14 +136,13 @@
           </div>
 
 
-
         </div>
       </div>
     </div>
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>telecom company f</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>telecom cpompany f</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -175,4 +171,4 @@
 
 </body>
 
-</html>
+</html>v

@@ -57,10 +57,10 @@
           <li><a class="nav-link scrollto" href="{% url 'services' %}">Services</a></li>
           <li class="dropdown"><a href="{% url 'dropdown' %}"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-               <li><a href="{% url 'show' %}">show product</a></li>
-                <li><a href="{% url 'add' %}">add product</a></li>
-                <li><a href="{% url 'add' %}">add product</a></li>
-                <li><a href="{% url 'add' %}">add product</a></li>
+               <li><a href="{% url 'show' %}">see services</a></li>
+                <li><a href="{% url 'add' %}">add services</a></li>
+                <li><a href="{% url 'uploadproducts' %}">add products</a></li>
+                <li><a href="{% url 'showproducts' %}">see products</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
@@ -78,14 +78,15 @@
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
       <div class="carousel-inner" role="listbox">
-
+          <link rel="stylesheet" href="{%  static 'images/' %}">
         <!-- Slide 1 -->
         <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown text-success text-center">Welcome to <span>telecom companny F</span></h2>
+              <h2 class="animate__animated animate__fadeInDown  text-center bg-success">Welcome to <span>telecom companny F</span></h2>
                 <p class="animate__animated animate__fadeInUp text-center m">home for all communication technologies.</p>
-              <a href="{% url 'about' %}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                <a href="{% url 'about' %}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+
             </div>
           </div>
         </div>
@@ -94,7 +95,7 @@
         <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg)">
           <div class="carousel-container ">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown text-center text-warning">asking for network services??</h2>
+              <h2 class="animate__animated animate__fadeInDown text-center text-warning bg-danger">asking for network services??</h2>
               <p class="animate__animated animate__fadeInUp text-center">telecom compony F with compitent personels ca offer you the best services that you will never regrate.</p>
               <a href="{% url 'about' %}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
             </div>
@@ -105,7 +106,7 @@
         <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown text-center text-danger">in need of communication equipments??</h2>
+              <h2 class="animate__animated animate__fadeInDown text-center text-danger bg-secondary">in need of communication equipments??</h2>
               <p class="animate__animated animate__fadeInUp text-center"> our company offers efficient and favourable cost communication equipments that are entitled with quite long warranty period.</p>
               <a href="{% url 'about' %}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
             </div>

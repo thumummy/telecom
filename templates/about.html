@@ -39,13 +39,13 @@
   ======================================================== -->
 </head>
 
-<body>
+<body class="bg-secondary">
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="{% url 'index' %}">telecom company F</a></h1>
+      <h1 class="logo"><a href="">telecom company F</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -56,10 +56,10 @@
           <li><a class="nav-link scrollto " href="{% url 'services' %}">Services</a></li>
           <li class="dropdown text-success "><a href="{% url 'dropdown' %}"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-                <li><a href="{% url 'show' %}">show product</a></li>
-                <li><a href="{% url 'add' %}">add product</a></li>
-                <li><a href="{% url 'add' %}">add product</a></li>
-                <li><a href="{% url 'add' %}">add product</a></li>
+                <li><a href="{% url 'show' %}">see services</a></li>
+                <li><a href="{% url 'add' %}">add a service</a></li>
+                <li><a href="{% url 'uploadproducts' %}">add product</a></li>
+                <li><a href="{% url 'showproducts' %}">see products</a></li>
 
             </ul>
           </li>
@@ -70,19 +70,19 @@
 
     </div>
   </header><!-- End Header -->
-
+  <br><br><br><br><br>
    <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>About</h2>
-          <p class="text-bg-success">About Us</p>
+          <p class="text-bg-success text-center">About Us</p>
         </div>
 
-        <div class="row content">
-          <div class="col-lg-6">
-            <p>
-              Safaricom PLC is a purpose-led technology company providing a  range of services and solutions, including mobile voice, messaging, data, financial and converged services, and digital services that enable commercial and personal platforms as well as ecosystem partnerships.
+        <div class="col content">
+          <div class="row-lg-6">
+            <p class="text-dark">
+                Welcome to telecom company f, where cutting-edge technology meets unparalleled service. As a leading telecommunication company, we redefine connectivity, offering a diverse range of high-quality goods and telecom services. With a commitment to innovation, we empower individuals and businesses to seamlessly navigate the digital landscape. Our dedicated team ensures reliable communication solutions, tailored to your needs. Experience the future of connectivity with telecom company f, where excellence is not just a commitment but a guarantee. Connect, communicate, and thrive with us.
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
@@ -90,11 +90,11 @@
               <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
             </ul>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
+          <div class="row-lg-6 pt-4 pt-lg-0">
             <p>
                 <img src="{% static 'images/saflogo1.png' %}" alt="">
             </p>
-            <a href="{% url 'services' %}" class="btn-learn-more">Learn More</a>
+            <a href="{% url 'services' %}" class="btn-learn-more b">Learn More</a>
           </div>
         </div>
 

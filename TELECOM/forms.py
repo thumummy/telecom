@@ -8,6 +8,10 @@ class ourservicesform(forms.ModelForm):
 
 
 
+class imageuploadform(forms.ModelForm):
+    class Meta:
+        model = imagemodel
+        fields = ['image','title','price']
 
 
 

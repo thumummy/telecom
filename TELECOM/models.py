@@ -18,7 +18,7 @@ class customer(models.Model):
 class ourservices(models.Model):
     name = models.CharField(max_length=50)
     price = models.IntegerField(default=0)
-    providercontact  = models.IntegerField(default=12)
+    providercontact = models.IntegerField(default=12)
 
 
     def __str__(self):
