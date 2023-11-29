@@ -2,8 +2,8 @@ from urllib import request
 
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from TELECOM.models import customer, ourservices, imagemodel
-from TELECOM.forms import ourservicesform, imageuploadform
+from TELECOM.models import customer, ourservices, imagemodel,workers
+from TELECOM.forms import ourservicesform, imageuploadform,workersdetailsform
 import requests
 import json
 import base64
@@ -75,6 +75,8 @@ def edit(request, id):
     product = ourservices.objects.get(id=id)
     return render(request,'edit.html',{'ourservices': product})
 
+
+
 def update(request, id):
     product = ourservices.objects.get(id=id)
     form = ourservicesform(request.POST, instance=product)
@@ -137,7 +139,26 @@ def showproducts(request):
     images = imagemodel.objects.all()
     return render(request, 'show products.html', {'imagemodel': images})
 
-def imagedelete(request, id):
-    image = imagemodel.objects.get(id=id)
-    image.delete()
-    return redirect('/showproducts')
+
+
+def workerdelete(request ,id):
+    worker = workers.objects.get(id=id)
+    worker.delete()
+    return redirect('/')
+
+def adddetails(request):
+    if request.method == "POST":
+        form = workersdetailsform(request.POST)
+        if form.is_valid():
+           form.save()
+           return redirect("/adddetails")
+    else:
+           form = workersdetailsform()
+           return render(request, 'workers details.html', {'form': form})
+
+
+
+
+def showworkersdetails(request):
+    worker = workers.objects.all()
+    return render(request, 'show workers details.html', {'workers': worker})

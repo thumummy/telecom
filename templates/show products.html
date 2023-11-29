@@ -15,6 +15,7 @@
   <link href="{% static 'assets/img/icon.png' %}" rel="icon">
   <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
     <link rel="stylesheet" href="{% static 'css/showprduct.css' %}">
+    <link href="{% static 'assets/img/tables2.png.png' %}" rel="icon">v
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -46,7 +47,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">telecom company f</a></h1>
+      <h1 class="logo"><a href="{% static 'assets/img/generallogo.png' %}">telecom company f</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -78,14 +79,12 @@
           <div style="display: flex;
           justify-content:space-between;
           flex-wrap: wrap">
-               {% for imagemodel in imagemodel %}
+               {% for image in imagemodel %}
               <div class="col mb-2">
-                  <img src="{{ imagemodel.imagemodel.url }}" alt="Uploaded Image" style="width: 300px;height:300px"> <br>
-                  <p><strong>Title :</strong>{{ imagemodel.title }}</p>
-                  <p><strong>Price :</strong>{{ imagemodel.price }}</p>
+                  <img src="{{ image.image.url }}" alt="Uploaded Image" style="width: 300px;height:300px"> <br>
+                  <p><strong>Title :</strong>{{ image.title }}</p>
+                  <p><strong>Price :</strong>{{ image.price }}</p>
 
-                  <a href="/imagedelete/{{ imagemodel.id }}" class="btn btn-outline-danger">DELETE</a>
-                  <a href="{% url 'pay' %}" class="btn btn-outline-success">PAY</a><br>
               </div>
            {% endfor %}
           </div>
@@ -110,37 +109,7 @@
                 <strong>Phone:</strong> 0793031327<br>
                 <strong>Email:</strong> fchmambza@gmail.com<br>
               </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
 
 
         </div>
@@ -156,7 +125,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/multi-responsive-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">fatuma salim</a>
+        designed by <br><br> fatuma salim
       </div>
     </div>
   </footer><!-- End Footer -->

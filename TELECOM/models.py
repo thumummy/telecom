@@ -32,3 +32,12 @@ class imagemodel(models.Model):
     def __str__(self):
         return self.title
 
+class workers(models.Model):
+    fullname = models.CharField(max_length=50)
+    ID = models.IntegerField(primary_key='true')
+    contact = models.IntegerField(default=12)
+    position = models.CharField(max_length=30)
+    branch = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.fullname

@@ -47,7 +47,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><img src="{% static 'images/saflogo2.png' %}" c alt=""><a href="index.html">telecom company f</a></h1>
+      <h1 class="logo"><a href="{% static 'assets/img/generallogo.png' %}">telecom company f</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -72,13 +72,14 @@
     </div>
   </header><!-- End Header -->
   <br><br><br><br>
+  <section>
 <h1 class="text-center bg-success">goods and services available</h1>
-  <div class="row bg-secondary">
+  <div class="row ">
       <div class="col">
         <h1>ofered services</h1>
         <img src="{% static 'assets/img/service.png' %}" alt="">
         <p class="text-dark">Explore a world of possibilities with our comprehensive range of telecom services. From cutting-edge mobile plans to robust internet solutions, we provide the connectivity you need. Click the button below to discover our diverse array of services tailored to meet your communication needs</p>
-        <a href="{% url 'show' %}" class="btn-primary">see our services</a>
+        <button class="btn-primary"><a href="{% url 'show' %}" >see our services</a></button>
 
       </div>
 
@@ -86,9 +87,10 @@
       <h1>available goods</h1>
       <img src="{% static 'assets/img/goods.png' %}" alt="">
       <p class="text-dark">Discover a universe of top-notch goods at our company. Our curated selection includes the latest devices, accessories, and more, ensuring you stay ahead in the world of technology. Navigate to our product offerings by clicking the link below, where quality meets innovation. Elevate your tech experience with our premium goods.</p>
-      <a href="{% url 'showproducts' %}" class="btn-outline-success">see products</a>
+      <button class="btn-outline-success"><a href="{% url 'showproducts' %}" >see products</a></button>
   </div>
   </div>
+  </section>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -106,37 +108,7 @@
                 <strong>Phone:</strong> 0793031327<br>
                 <strong>Email:</strong> fchambaza@gmail.com<br>
               </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
 
 
 
@@ -153,7 +125,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/multi-responsive-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">fatuma salim</a>
+        designed by <br><br> fatuma salim
       </div>
     </div>
   </footer><!-- End Footer -->

@@ -39,13 +39,13 @@
   ======================================================== -->
 </head>
 
-<body class="bg-secondary">
+<body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="">telecom company F</a></h1>
+      <h1 class="logo"><a href="{% static 'assets/img/generallogo.png' %}">telecom company F</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -54,7 +54,7 @@
           <li><a class="nav-link scrollto " href="{% url 'index' %}">Home</a></li>
           <li><a class="nav-link scrollto " href="{% url 'about' %}">About</a></li>
           <li><a class="nav-link scrollto " href="{% url 'services' %}">Services</a></li>
-          <li class="dropdown text-success "><a href="{% url 'dropdown' %}"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown text-success "><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
                 <li><a href="{% url 'show' %}">see services</a></li>
                 <li><a href="{% url 'add' %}">add a service</a></li>
@@ -82,19 +82,18 @@
         <div class="col content">
           <div class="row-lg-6">
             <p class="text-dark">
-                Welcome to telecom company f, where cutting-edge technology meets unparalleled service. As a leading telecommunication company, we redefine connectivity, offering a diverse range of high-quality goods and telecom services. With a commitment to innovation, we empower individuals and businesses to seamlessly navigate the digital landscape. Our dedicated team ensures reliable communication solutions, tailored to your needs. Experience the future of connectivity with telecom company f, where excellence is not just a commitment but a guarantee. Connect, communicate, and thrive with us.
-            </p>
+                Welcome to telecom company f, where cutting-edge technology meets unparalleled service. As a leading telecommunication company, we redefine connectivity, offering a diverse range of high-quality goods and telecom services. With a commitment to innovation, we empower individuals and businesses to seamlessly navigate the digital landscape. Our dedicated team ensures reliable communication solutions, tailored to your needs. Experience the future of connectivity with telecom company f, where excellence is not just a commitment but a guarantee.</p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+              <li><i class="ri-check-double-line "></i> Connect , </li>
+              <li><i class="ri-check-double-line "></i> communicate</li>
+              <li><i class="ri-check-double-line "></i> and thrive with us</li>
             </ul>
           </div>
           <div class="row-lg-6 pt-4 pt-lg-0">
             <p>
                 <img src="{% static 'images/saflogo1.png' %}" alt="">
             </p>
-            <a href="{% url 'services' %}" class="btn-learn-more b">Learn More</a>
+            <a href="{% url 'services' %}" class="btn-learn-more text-center">Learn More</a>
           </div>
         </div>
 
@@ -127,33 +126,7 @@
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-
-
-        </div>
-      </div>
-    </div>
 
     <div class="container">
       <div class="copyright">
@@ -164,7 +137,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/multi-responsive-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">fatuma salim</a>
+        designed by <br><br> fatuma salim
       </div>
     </div>
   </footer><!-- End Footer -->

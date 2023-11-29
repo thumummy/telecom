@@ -12,9 +12,9 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/icon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/showicon.png' %}" rel="icon">
   <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-    <link rel="stylesheet" href="{% static 'css/pay.css' %}">
+    <link rel="stylesheet" href="{% static 'css/edit.css' %}">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -71,22 +71,37 @@
 
     </div>
   </header><!-- End Header -->
-  <br><br><br>
 
-<h1 class="bg-success text-center">make a payment here</h1>
-<form method="post" action="{% url 'stk' %}" style="display: auto">
+<body>
+<h1>update information</h1>
+<form method="post" action="/updatedetails/{{ workers.id }}" class="p-5">
     {% csrf_token %}
-    <label for="phone">phone number :</label>
-    <input type="number" id="phone" name="phone" value="254" required="required">
-    <br><br>
-     <label for="amount">amount :</label>
-    <input type="number" id="amount" name="amount"  required="required">
-    <br><br>
-    <button type="submit">pay</button>
+    <label for="fullname" class="form-label">fullname</label>
+    <input type="text" id="fullname" name="fullname" value="{{ workers.fullname }}" class="form-control">
+
+    <label for="ID" class="form-label">ID</label>
+    <input type="number" id="ID" name="ID" value="{{ workers.ID }}" class="form-control">
+
+    <label for="contact" class="form-label">contact</label>
+    <input type="text" id="contact" name="contact" value="{{ workers.contact}}" class="form-control">
+
+        <label for="position" class="form-label">position</label>
+    <input type="text" id="position" name="description" value="{{ workers.position}}" class="form-control">
+
+
+        <label for="branch" class="form-label">branch</label>
+    <input type="text" id="branch" name="branch" value="{{ workers.branch}}" class="form-control">
+
+
+
+
+      <br><br>
+    <button type="submit" class="btn btn-primary">Update</button>
 </form>
+</body>
 
 
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="footer-top">
@@ -98,11 +113,13 @@
               <h3>telecom company f</h3>
               <p class="pb-3"><em>purposed to connect people during social distances</em></p>
               <p>
-                telecom company f <br>
-                kale kenya<br><br>
-                <strong>Phone:</strong> 0793031327<br>
-                <strong>Email:</strong> fchammbaza@gmail.com<br>
+                telecom company f<br>
+                 kenya<br><br>
+                <strong>Phone:</strong> o793031327<br>
+                <strong>Email:</strong> fchambaza@gmail.com<br>
               </p>
+
+
 
 
         </div>
@@ -111,14 +128,14 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>telecom cpompany f</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Multi</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/multi-responsive-bootstrap-template/ -->
-        designed by <br><br> fatuma salim
+       designed by <br><br> fatuma salim
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -140,4 +157,4 @@
 
 </body>
 
-</html>v
+</html>

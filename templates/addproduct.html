@@ -54,10 +54,10 @@
           <li><a class="nav-link scrollto text-success" href="{% url 'index' %}">Home</a></li>
           <li><a class="nav-link scrollto text-success" href="{% url 'about' %}">About</a></li>
           <li><a class="nav-link scrollto text-success" href="{% url 'services' %}">Services</a></li>
-          <li class="dropdown text-success"><a href="{% url 'dropdown' %}"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown text-success"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-                  <li><a href="{% url 'show' %}">show product</a></li>
-                  <li><a href="{% url 'add' %}">add product</a></li>
+                  <li><a href="{% url 'show' %}">show services</a></li>
+                  <li><a href="{% url 'add' %}">add services</a></li>
                   <li><a href="{% url 'uploadproducts' %}">add product</a></li>
                   <li><a href="{% url 'showproducts' %}">see product</a></li>
             </ul>
@@ -70,11 +70,11 @@
 
     </div>
   </header><!-- End Header -->
-  <br><br><br><br>
+  <br><br><br><br><br><br>
   <body>
-
+<h1 class="text-center text-bg-success">add services here </h1>
 <form method="post" action="{% url 'add' %}" class="bg-secondary">
-    <h1 class="text-center text-bg-success">add services here </h1>
+
     {% csrf_token %}
 
     <div class="row mb-3">
@@ -132,7 +132,7 @@
               <h3>telecom company f</h3>
               <p class="pb-3"><em>purposed to connect people during social distancesv</em></p>
               <p>
-                safaricom <br>
+                telecom company f <br>
                 kenya<br><br>
                 <strong>Phone:</strong> 0793031327<br>
                 <strong>Email:</strong> fchambaza@gmail.com<br>
@@ -145,28 +145,6 @@
                 <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
               </div>
             </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
           </div>
 
 
@@ -184,7 +162,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/multi-responsive-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">fatuma salim</a>
+        designed by <br><br> fatuma salim
       </div>
     </div>
   </footer><!-- End Footer -->
