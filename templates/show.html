@@ -84,11 +84,11 @@
     <td>{{ product.providercontact }}</td>
 
        <td>
-             <a href="/delete/{{ product.id }}" class="btn btn-outline-primary">delete</a>
              <a href="{% url 'pay' %}" class="btn btn-outline-success">pay</a>
        </td>
     </tr>
 {% endfor %}
+<p class="bg-dark">for orders and inquireries contact us through the provider contact</p>
 </tbody>
 
 </table>
