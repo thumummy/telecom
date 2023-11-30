@@ -130,7 +130,7 @@ def uploadproducts(request):
         form = imageuploadform(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('/uploadproducts')
+            return redirect('/showproducts')
     else:
         form = imageuploadform()
     return render(request, 'upload products.html', {'form': form})

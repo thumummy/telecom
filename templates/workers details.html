@@ -13,7 +13,7 @@
   <!-- Favicons -->
 
   <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-<link href="{% static 'images/form icon1.png' %}" rel="icon">
+<link href="{% static 'assets/img/abouticon.png' %}" rel="icon">
     <link rel="stylesheet" href="{% static 'css/add.css' %}">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -28,16 +28,10 @@
   <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
+  <!--  CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Multi
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/multi-responsive-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
 </head>
 
 <body>
@@ -55,7 +49,7 @@
           <li><a class="nav-link scrollto " href="{% url 'index' %}">Home</a></li>
           <li><a class="nav-link scrollto " href="{% url 'about' %}">About</a></li>
           <li><a class="nav-link scrollto " href="{% url 'services' %}">Services</a></li>
-          <li class="dropdown text-success "><a href="{% url 'dropdown' %}"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown text-success "><a href="{% url 'dropdown' %}"><span>products and services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
                 <li><a href="{% url 'show' %}">see services</a></li>
                 <li><a href="{% url 'add' %}">add a service</a></li>
@@ -169,10 +163,7 @@
         &copy; Copyright <strong><span>telecom company f</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/multi-responsive-bootstrap-template/ -->
+
         designed by <br><br> fatuma salim
       </div>
     </div>

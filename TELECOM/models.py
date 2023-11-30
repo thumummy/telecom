@@ -25,7 +25,7 @@ class ourservices(models.Model):
         return self.name
 
 class imagemodel(models.Model):
-    image = models.ImageField(upload_to='image/')
+    image = models.ImageField(upload_to='images/')
     title = models.CharField(max_length= 50)
     price = models.CharField(max_length=50)
 
